@@ -12,16 +12,16 @@ export default defineConfig({
       directives: [
         "default-src 'self'",
         "base-uri 'none'",
-        "connect-src 'self' blob:",
+        "connect-src 'self'",
         "font-src 'self'",
         "form-action 'self'",
         "frame-src 'none'",
-        "img-src 'self' blob:",
+        "img-src 'self'",
         "object-src 'none'",
-        "worker-src 'self' blob:",
+        "worker-src 'self'",
       ],
       scriptDirective: {
-        resources: ["'self'", "'wasm-unsafe-eval'"],
+        resources: ["'self'"],
       },
       styleDirective: {
         resources: [{ resource: "'unsafe-inline'", kind: "attribute" }],
@@ -29,7 +29,6 @@ export default defineConfig({
     },
   },
   vite: {
-    assetsInclude: ["**/*.glb", "**/*.hdr"],
     build: {
       rolldownOptions: {
         // Font URLs are resolved by the production Worker rather than the build.

@@ -1,13 +1,7 @@
 ---
 import "../styles/global.css";
-import BlenderLogo from "../components/BlenderLogo.astro";
-import Footer from "../components/Footer.astro";
-import InlineLink from "../components/InlineLink.astro";
 import wordmark from "../assets/images/brand/wordmark.svg";
-import wordmarkMobile from "../assets/images/brand/wordmark-mobile.svg";
-import profileImage from "../assets/images/portraits/abdurahmaan-saloojee.jpg";
 import socialImage from "../assets/images/social/og-image.png";
-import Image from "astro/components/Image.astro";
 const title = "Omniwerx®";
 const description = "Omniwerx®: Precision-engineered websites & interfaces.";
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
@@ -51,143 +45,28 @@ const socialImageUrl = new URL(socialImage.src, Astro.site ?? Astro.url);
       content="Omniwerx® web design and development"
     />
   </head>
-  <body>
+  <body class="wrapper">
     <main>
-      <section id="hero">
-        <div class="hero__wordmark">
-          <div class="meta-row">omnx_01::<em>wordmark</em></div>
-          <div class="hero__wordmark__container">
-            <picture>
-              <source
-                media="(max-width: 991px)"
-                srcset={wordmarkMobile.src}
-                type="image/svg+xml"
-                width={wordmarkMobile.width}
-                height={wordmarkMobile.height}
-              />
-              <Image
-                src={wordmark}
-                alt="Omniwerx®"
-                class="hero__wordmark__img"
-              />
-            </picture>
-          </div>
-        </div>
-        <div class="hero__content">
-          <div class="hero__content__lead">
-            <div class="meta-row">
-              omnx_02::<em>statement</em>
-            </div>
-            <h1>
-              Omniwerx&reg; is the development and design consultancy of
-              Abdurahmaan Saloojee, specializing in websites, product
-              interfaces, and custom software for expert-led fitness businesses.
-            </h1>
-          </div>
-          <div class="hero__content__model">
-            <div class="meta-row">
-              omnx_03::<em>model</em>
-            </div>
-            <BlenderLogo />
-          </div>
-        </div>
-      </section>
-      <section id="details">
-        <div class="details__about">
-          <div class="meta-row">
-            omnx_04::<em>capabilities</em>
-          </div>
-          <h2 class="details__title">The work at a glance</h2>
-          <div class="details__list">
-            <article class="details__list-item">
-              <span class="list__index">01</span>
-              <h3>Website</h3>
-              <p>
-                Build a credible, polished digital presence that clearly
-                differentiates you from competitors.
-              </p>
-            </article>
-            <article class="details__list-item">
-              <span class="list__index">02</span>
-              <h3>Product</h3>
-              <p>
-                Provide a streamlined customer experience across lead funnels,
-                sales flows, and other touchpoints.
-              </p>
-            </article>
-            <article class="details__list-item">
-              <span class="list__index">03</span>
-              <h3>Marketing</h3>
-              <p>
-                Reinforce the technical systems and assets that support
-                campaigns, emails, and marketing growth.
-              </p>
-            </article>
-          </div>
-        </div>
-        <div class="details__services">
-          <div class="meta-row">
-            omnx_5::<em>engagements</em>
-          </div>
-          <h2 class="details__title">How we work together</h2>
-          <article class="details__engagement details__engagement--project">
-            <div class="details__engagement-body">
-              <h3>Project</h3>
-              <p>
-                A focused, 2-4 week sprint to deliver a defined result. Refresh
-                design language, implement a new page, or remove a technical
-                bottleneck.
-              </p>
-              <div class="details__engagement-footer">
-                <div class="details__engagement-price">
-                  <span>Starting at</span>
-                  <span>$5,000</span>
-                </div>
-                <p class="details__engagement-action">
-                  <InlineLink href="mailto:info@omniwerx.io" arrow
-                    >Discuss a project</InlineLink
-                  >
-                </p>
-              </div>
-            </div>
-          </article>
-          <p class="details__text details__partnership-copy">
-            We also offer embedded partnerships for businesses with a backlog of
-            development and design work.
-          </p>
-          <p class="details__text">
-            <InlineLink href="mailto:info@omniwerx.io" arrow
-              >Inquire about a partnership</InlineLink
-            >
-          </p>
-        </div>
-        <div class="details__contact">
-          <div class="meta-row">
-            omnx_06::<em>profile</em>
-          </div>
-          <h2 class="details__title">About the founder</h2>
-          <Image
-            src={profileImage}
-            alt="Portrait of Abdurahmaan Saloojee"
-            class="details__founder-headshot"
-          />
-          <p class="details__text">
-            I'm Abdurahmaan Saloojee, a developer & designer from Ottawa,
-            Canada. I currently build web products and support marketing
-            infrastructure at Pre-Script, a fitness education company.
-          </p>
-          <p class="details__text">
-            Through Omniwerx&reg;, I help businesses build better websites,
-            refine product interfaces, and streamline technical operations.
-          </p>
-          <p class="details__text">
-            <InlineLink href="mailto:info@omniwerx.io" arrow
-              >Let's talk</InlineLink
-            >
-          </p>
-        </div>
+      <img
+        class="wordmark"
+        src={wordmark.src}
+        width={wordmark.width}
+        height={wordmark.height}
+        alt="Omniwerx®"
+      />
+      <p class="tagline">Independent software development consultancy</p>
+      <p class="text">
+        Omniwerx&reg; designs websites, builds product interfaces, and engineers
+        internal systems for businesses that need faster solutions, better
+        tools, and stronger visual identity. The consultancy is the project of
+        Abdurahmaan Saloojee, a developer from Ottawa, Canada.
+      </p>
+      <section>
+        <h2>What we do</h2>
+        <p class="text">Some of the services we provide inlude:</p>
       </section>
     </main>
-    <Footer />
   </body>
 </html>
+
+<style></style>
