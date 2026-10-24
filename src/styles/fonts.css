@@ -50,29 +50,3 @@
 		"zero" 1,
 		"tnum" 1;
 }
-
-@font-face {
-	font-family: "Söhne Mono";
-	src:
-		local("Söhne Mono Halbfett"),
-		url("/fonts/soehne-mono-halbfett.woff2") format("woff2");
-	font-weight: 600;
-	font-style: normal;
-	font-display: swap;
-	font-feature-settings:
-		"zero" 1,
-		"tnum" 1;
-}
-
-@font-face {
-	font-family: "Söhne Mono";
-	src:
-		local("Söhne Mono Bold"),
-		url("/fonts/soehne-mono-dreiviertelfett.woff2") format("woff2");
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-	font-feature-settings:
-		"zero" 1,
-		"tnum" 1;
-}

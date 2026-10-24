@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import wordmark from "../assets/images/brand/wordmark.svg";
 import socialImage from "../assets/images/social/og-image.png";
+import InlineLink from "../components/InlineLink.astro";
 const title = "Omniwerx®";
 const description = "Omniwerx®: Precision-engineered websites & interfaces.";
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
@@ -47,15 +48,17 @@ const socialImageUrl = new URL(socialImage.src, Astro.site ?? Astro.url);
   </head>
   <body class="wrapper">
     <main>
-      <img
-        class="wordmark"
-        src={wordmark.src}
-        width={wordmark.width}
-        height={wordmark.height}
-        alt="Omniwerx®"
-      />
+      <h1>
+        <img
+          class="wordmark"
+          src={wordmark.src}
+          width={wordmark.width}
+          height={wordmark.height}
+          alt="Omniwerx®"
+        />
+      </h1>
       <p class="tagline">Independent software development consultancy</p>
-      <p class="text">
+      <p class="lead">
         Omniwerx&reg; designs websites, builds product interfaces, and engineers
         internal systems for businesses that need faster solutions, better
         tools, and stronger visual identity. The consultancy is the project of
@@ -63,10 +66,28 @@ const socialImageUrl = new URL(socialImage.src, Astro.site ?? Astro.url);
       </p>
       <section>
         <h2>What we do</h2>
-        <p class="text">Some of the services we provide inlude:</p>
+        <p>Some of the services we provide include:</p>
+        <ul>
+          <li>Web development</li>
+          <li>Product/interface design</li>
+          <li>Backend integration</li>
+          <li>Marketing automation</li>
+        </ul>
+      </section>
+      <section>
+        <h2>How we work</h2>
+        <p>
+          We work with clients in two ways: projects and retainers. Projects are
+          for fixed engagements with a defined scope, and retainers are for
+          open-ended engagements with a backlog of work.
+        </p>
+        <div class="project-link">
+          <InlineLink href="mailto:info@omniwerx.io" arrow>
+            Start a project
+          </InlineLink>
+        </div>
       </section>
     </main>
+    <footer class="site-footer">&copy; 2026 Omniwerx Inc.</footer>
   </body>
 </html>
-
-<style></style>

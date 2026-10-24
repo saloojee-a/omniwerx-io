@@ -1,11 +1,8 @@
 const FONT_KEYS = new Map([
-  ["/fonts/soehne-leicht.woff2", "fonts/soehne-leicht.woff2"],
   ["/fonts/soehne-buch.woff2", "fonts/soehne-buch.woff2"],
   ["/fonts/soehne-kraftig.woff2", "fonts/soehne-kraftig.woff2"],
   ["/fonts/soehne-dreiviertelfett.woff2", "fonts/soehne-dreiviertelfett.woff2"],
   ["/fonts/soehne-mono-buch.woff2", "fonts/soehne-mono-buch.woff2"],
-  ["/fonts/soehne-mono-halbfett.woff2", "fonts/soehne-mono-halbfett.woff2"],
-  ["/fonts/soehne-mono-dreiviertelfett.woff2", "fonts/soehne-mono-dreiviertelfett.woff2"],
 ]);
 
 const PRODUCTION_HOSTS = new Set(["omniwerx.io", "www.omniwerx.io"]);
