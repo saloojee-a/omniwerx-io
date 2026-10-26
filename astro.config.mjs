@@ -29,6 +29,9 @@ export default defineConfig({
     },
   },
   vite: {
+    server: {
+      allowedHosts: ["dev"],
+    },
     build: {
       rolldownOptions: {
         // Font URLs are resolved by the production Worker rather than the build.
