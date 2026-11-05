@@ -41,8 +41,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build
-        run: pnpm exec vp run build
+      - name: Verify and build
+        run: pnpm exec vp run verify
 
       - name: Check deployment secrets
         env:
