@@ -30,11 +30,5 @@ export default defineConfig({
   },
   vite: {
     assetsInclude: ["**/*.glb", "**/*.hdr"],
-    build: {
-      rolldownOptions: {
-        // Font URLs are resolved by the production Worker rather than the build.
-        external: /^\/fonts\/[^/]+\.woff2$/,
-      },
-    },
   },
 });

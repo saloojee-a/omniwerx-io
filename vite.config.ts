@@ -9,7 +9,7 @@ export default defineConfig({
   },
   fmt: {
     // Oxfmt does not support Astro files; Prettier checks them in `vp run verify`.
-    ignorePatterns: ["public/draco/**", "**/*.astro", "worker-configuration.d.ts"],
+    ignorePatterns: ["public/draco/**", "**/*.astro"],
     useTabs: false,
     tabWidth: 2,
     overrides: [

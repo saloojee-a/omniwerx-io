@@ -4,13 +4,13 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && vp run check:font-assets",
-    "check:font-assets": "node scripts/assert-no-font-assets.mjs",
+    "build": "vp run check:private-assets && astro build",
+    "check:private-assets": "node scripts/assert-private-assets.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "verify": "vp check && vp exec prettier --check \"**/*.astro\" && vp test --run --passWithNoTests && vp run build",
     "prepare": "vp config",
-    "deploy": "wrangler deploy --env production",
+    "deploy": "vp run check:private-assets && wrangler deploy --env production",
     "deploy:preview": "pnpm run build && wrangler deploy --env preview"
   },
   "dependencies": {
